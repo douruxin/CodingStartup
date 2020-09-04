@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Form Label with Text Fields</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- 
+      第一部分：
+        + 建构表单的 HTML 代码与 CSS 样式
+      第二部分：
+        + 处理栏位标题在聚焦与失焦时的位置
+      第三部分：
+        + 在栏位输入文字后将标题隐藏，以及展示登录按钮
+    -->
+
+    <h2>会员登录</h2>
+    <div class="row">
+      <input type="text" id="username" placeholder=" " />
+      <label for="username">用户名称</label>
+    </div>
+    <div class="row">
+      <input type="password" id="password" placeholder=" " />
+      <label for="password">密码</label>
+      <button>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 353 353">
+          <g id="Code_Test" data-name="Code Test" transform="translate(-767 -354)">
+            <g id="center_1" data-name="center 1" transform="translate(767 354)" fill="none" stroke="#2a2b2c" stroke-width="33">
+              <circle cx="176.5" cy="176.5" r="176.5" stroke="none"/>
+              <circle cx="176.5" cy="176.5" r="160" fill="none"/>
+            </g>
+            <g id="path_1" data-name="path 1" transform="translate(1011.596 450) rotate(90)" fill="#2a2b2c">
+              <path d="M 152.8049774169922 102.6839599609375 L 7.362161636352539 102.6839599609375 L 77.04270172119141 0.8604881167411804 L 152.8049774169922 102.6839599609375 Z" stroke="none"/>
+              <path d="M 77.05971527099609 1.720939636230469 L 8.310165405273438 102.1839599609375 L 151.8097534179688 102.1839599609375 L 77.05971527099609 1.720939636230469 M 77.02568054199219 0 L 153.8002319335938 103.1839599609375 L 6.41412353515625 103.1839599609375 L 77.02568054199219 0 Z" stroke="none" fill="#707070"/>
+            </g>
+          </g>
+        </svg>        
+      </button>
+    </div>
+  </body>
+</html>
