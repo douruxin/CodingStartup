@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flipping Card</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- 
+    1. 使用 position absolute 重叠两个 div
+    2. 使用 transform: rotateY() 旋转两个 div
+    3. 使用 backface-visibility 隐藏背面
+    4. 使用 perspective 设定透视深度
+   -->
+  <div class="card-container">
+    <div class="cover">
+      COVER
+    </div>
+    <div class="back">
+      BACK
+    </div>
+  </div>
+  <div class="card-container">
+    <div class="cover">
+      COVER
+    </div>
+    <div class="back">
+      BACK
+    </div>
+  </div>
+  <div class="card-container">
+    <div class="cover">
+      COVER
+    </div>
+    <div class="back">
+      BACK
+    </div>
+  </div>
+</body>
+</html>

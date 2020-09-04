@@ -1,0 +1,38 @@
+.flex-container {
+  display: flex;
+  background-color: #044BD9;
+  width: 180px;
+  height: 200px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.box {
+  width: 90px;
+  height: 60px;
+  flex-grow: 1;
+  flex-shrink: 0;
+  background-color: #eee;
+  text-align: center;
+  line-height: 60px;
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, .18);
+  font-size: 2em;
+}
+
+.A {
+  background-color: #6DD9BF;
+  flex-shrink: 1;
+}
+
+.B {
+  background-color: #50A18E;
+  flex-shrink: 0;
+}
+
+.C {
+  background-color: #F2D689;
+  flex-shrink: 1;
+}

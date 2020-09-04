@@ -1,0 +1,11 @@
+ul {
+  display: flex;
+  justify-content: space-around;
+  background-color: #eee;
+  padding: 8px 0;
+}
+
+ul > li a {
+  display: block;
+  padding: 4px 8px;
+}
