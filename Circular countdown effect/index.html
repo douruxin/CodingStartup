@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circular countdown effect</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="countdown">
+        <svg :width="size" :height="size">
+          <circle
+            class="circle"
+            fill="transparent"
+            :stroke-width="stroke"
+            stroke="#270B58"
+            :r="radius"
+            :cx="circleOffset"
+            :cy="circleOffset"
+          ></circle>
+          <circle
+            class="circle"
+            fill="transparent"
+            :stroke-width="stroke"
+            stroke="#F36F21"
+            :r="radius"
+            :cx="circleOffset"
+            :cy="circleOffset"
+            :stroke-dasharray="circumference"
+            :stroke-dashoffset="progress"
+            stroke-linecap="round"
+          ></circle>
+        </svg>
+        <span v-text>{{ countdown }}</span>
+      </div>
+      <button @click="animate">Animate!</button>
+    </div>
+
+    <!-- 引入 Vue 库 -->
+    <script src="https://cdn.staticfile.org/vue/2.6.12/vue.min.js"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
