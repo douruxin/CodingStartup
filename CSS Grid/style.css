@@ -1,0 +1,50 @@
+body {
+  margin: 40px;
+}
+
+#ruler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 580px;
+  height: 580px;
+  background-image: url(https://codingstartup.com/assets/grid/grid-ruler.png);
+  background-size: 580px 580px;
+}
+
+#grid-container {
+  display: grid;
+  width: 540px;
+  height: 540px;
+  background-color: #eee;
+  grid-template-rows: 3fr repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas:
+    "header header header header header"
+    "nav main main main main"
+    "nav main main main main"
+    "nav main main main main"
+    ". footer footer footer .";
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.cell-1 {
+  background-color: blue;
+  grid-area: header;
+}
+
+.cell-2 {
+  background-color: yellow;
+  grid-area: nav;
+}
+
+.cell-3 {
+  background-color: orange;
+  grid-area: main;
+}
+
+.cell-4 {
+  background-color: black;
+  grid-area: footer;
+}
