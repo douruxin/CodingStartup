@@ -1,0 +1,11 @@
+.height {
+  width: 750px;
+  height: 120px;
+}
+
+.sticky {
+  position: sticky;
+  width: 240px;
+  height: 90px;
+  top: 0;
+}

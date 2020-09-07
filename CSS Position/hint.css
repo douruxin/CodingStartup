@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.relative:after {
+  display: block;
+  content: "";
+  background-image: url(https://codingstartup.com/assets/css-position/relative.png);
+  background-size: 510px 421px;
+  width: 510px;
+  height: 421px;
+  position: absolute;
+  top: -60px;
+  left: -150px;
+  z-index: -10;
+}
+
+.relative {
+  margin-bottom: 60px;
+}
+
+.static:after {
+  display: block;
+  content: "";
+  background-image: url(https://codingstartup.com/assets/css-position/static.png);
+  background-size: 360px 360px;
+  width: 360px;
+  height: 360px;
+}
+
+.absolute:after {
+  display: block;
+  content: "";
+  background-image: url(https://codingstartup.com/assets/css-position/absolute.png);
+  background-size: 319px 300px;
+  width: 319px;
+  height: 300px;
+  position: absolute;
+  right: -80px;
+  bottom: -60px;
+  z-index: -5;
+}
+
+.absolute .absolute:after {
+  z-index: -1;
+}
+
+.fixed:after {
+  display: block;
+  content: "";
+  background-image: url(https://codingstartup.com/assets/css-position/fixed.png);
+  background-size: 320px 300px;
+  width: 320px;
+  height: 300px;
+  position: absolute;
+  left: -80px;
+  bottom: -60px;
+  z-index: -5;
+}
+
+.sticky {
+  background-image: url(https://codingstartup.com/assets/css-position/sticky.png);
+  background-size: 240px 90px;
+}
+
+.height {
+  background-image: url(https://codingstartup.com/assets/css-position/height-120.png);
+  background-size: 750px 120px;
+  position: relative;
+  z-index: -20;
+}

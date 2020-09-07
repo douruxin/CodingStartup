@@ -1,0 +1,26 @@
+.height {
+  width: 750px;
+  height: 120px;
+}
+
+.static {
+  position: static;
+  width: 360px;
+  height: 360px;
+}
+
+.relative {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  top: 60px;
+  left: 150px;
+}
+
+.absolute {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  right: 80px;
+  bottom: 60px;
+}
