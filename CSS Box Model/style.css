@@ -1,0 +1,39 @@
+strong {
+  border: 1px solid black;
+  background-color: yellow;
+  display: inline-block;
+  padding: 20px;
+  margin: 20px;
+  opacity: .8;
+}
+
+.blue, .yellow {
+  height: 100px;
+  margin: 100px;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.separator {
+  height: 1px;
+  background-color: black;
+}
+
+.yellow {
+  background-color: yellow;
+  margin-top: 200px;
+}
+
+div.text, div.with-padding {
+  background-color: blue;
+  color: white;
+  width: 300px;
+}
+
+.with-padding {
+  padding: 20px;
+  box-sizing: border-box;
+  border: 10px solid black;
+}
