@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+}
+
+.scalable {
+  background-color: #eee;
+  position: relative;
+}
+
+.main {
+  background-color: yellow;
+  flex: 1;
+}
+
+.content {
+  padding: 20px;
+}
+
+.scalable .separator {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 14px;
+  height: 100%;
+  background-color: black;
+}
