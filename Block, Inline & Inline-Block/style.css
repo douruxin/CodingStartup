@@ -1,0 +1,19 @@
+p {
+  width: 50%;
+}
+
+strong {
+  background-color: yellow;
+}
+
+a {
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+}
