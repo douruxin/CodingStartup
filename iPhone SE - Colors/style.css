@@ -2,13 +2,13 @@ html {
   font-size: 48px;
 
   --iPhone-black-bg: #000;
-  --iPhone-black-text: #f2f2f2;
+  --iPhone-black-text: #f5f5f7;
 
-  --iPhone-white-bg: #fff;
+  --iPhone-white-bg: #f2f2f2;
   --iPhone-white-text: #8b8b99;
   --iPhone-white-text-hignlight: #1d1d1f;
 
-  --iPhone-red-bg: #f00;
+  --iPhone-red-bg: #960b19;
   --iPhone-red-text: #e57571;
   --iPhone-red-text-hignlight: #f5f5f7;
 
@@ -18,7 +18,7 @@ html {
 
 body {
   margin: 0;
-  height: 3000px;
+  height: 3500px;
   font-family: Helvetica;
   background-color: #000;
 }
@@ -45,8 +45,8 @@ body {
 
 .sticky-container .iPhone h3 {
   font-size: 1rem;
-  color: #fff;
   margin:  0 0 60px 0;
+  width: var(--iPhone-width);
 }
 
 .sticky-container .iPhone img {
@@ -64,6 +64,49 @@ body {
   color: var(--iPhone-black-text);
 }
 
-.sticky-container .iPhone h3 span {
-  color: transparent;
+.sticky-container .iPhone h3 span.opacity-zero {
+  opacity: 0;
+}
+
+.sticky-container .iPhone.white {
+  background-color: var(--iPhone-white-bg);
+  z-index: 20;
+
+  clip-path: inset(100% 0px 0px 0px);
+}
+
+.sticky-container .iPhone.white h3 {
+  color: var(--iPhone-white-text)
+}
+
+.sticky-container .iPhone.white h3 span {
+  color: var(--iPhone-white-text-hignlight);
+}
+
+.sticky-container .iPhone.red {
+  background-color: var(--iPhone-red-bg);
+  z-index: 30;
+
+  clip-path: inset(100% 0px 0px 0px);
+}
+
+.sticky-container .iPhone.red h3 {
+  color: var(--iPhone-red-text)
+}
+
+.sticky-container .iPhone.red h3 span {
+  color: var(--iPhone-red-text-hignlight);
+}
+
+.sticky-container.no-sticky {
+  position: relative;
+  overflow: visible;
+}
+
+.sticky-container.no-sticky .iPhone {
+  position: relative;
+}
+
+.sticky-container.no-sticky .iPhone.red {
+  padding-bottom: calc(var(--iPhone-offscreen) * -1);
 }
