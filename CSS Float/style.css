@@ -1,0 +1,32 @@
+.left, .middle, .right {
+  background-color: yellow;
+}
+
+.left {
+  float: left;
+  width: 33.3%;
+}
+
+.middle {
+  float: left;
+  width: 33.4%;
+}
+
+.right {
+  float: left;
+  width: 20%;
+}
+
+.container {
+  /* IE 所有版本的浏览器都不支持 */
+  /* display: flow-root; */
+}
+
+.container::after {
+  content: "解决高度塌陷";
+  clear: both;
+  display: block;
+  height: 0px;
+  overflow: hidden;
+  visibility: hidden;
+}

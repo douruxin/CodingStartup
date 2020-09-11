@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG Chart</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <svg id="chart" viewBox="0 0 200 100">
+      <!-- 
+        g：
+          transform="translate(0, 100) scale(1, -1)" 向下移动 100px，并且上下翻转
+        path：
+          fill 填充颜色
+          stroke-width 线条粗度
+          stroke-linecap="round" 线帽样式：圆角
+          stroke-linejoin="round" 线条交接处：圆角
+          d="M 20,20 40,40 60,20 80,40" path 的坐标数据（M：移动）
+       -->
+      <g id="path-container" transform="translate(0, 100) scale(1, -1)">
+        <path
+          id="line"
+          fill="none"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </g>
+      <text
+        text-anchor="middle"
+        alignment-baseline="middle"
+        x="100"
+        y="50"
+        class="loading"
+      >
+        Loading...
+      </text>
+    </svg>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
