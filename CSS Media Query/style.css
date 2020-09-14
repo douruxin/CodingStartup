@@ -1,0 +1,49 @@
+html {
+  font-size: 15px;
+}
+
+body {
+  font-family: Helvetica;
+  margin: 0;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  flex: 1;
+  text-align: center;
+  color: #fff;
+  font-size: 1rem;
+  padding: 1rem 0;
+}
+
+/* 
+  sm：640px 以下基本上就是指手机
+  md：768px 以上是指 iPad 在直向时
+  lg：1024px 以上是指电脑或 iPad 在横向时
+  xl：1280px 以上就是电脑屏幕的尺寸
+*/
+
+/* 匹配样式为屏幕宽度在 360px 以下的设备 */
+@media screen and (max-width: 360px) {
+  ul {
+    flex-direction: column;
+  }
+}
+
+/* 匹配样式为屏幕宽度在 960px 以上的设备 */
+@media screen and (min-width: 960px) {
+  ul {
+    padding: 0 3rem;
+  }
+
+  ul li {
+    font-size: 1.2rem;
+  }
+}
