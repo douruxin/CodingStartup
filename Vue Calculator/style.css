@@ -1,0 +1,29 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #eee;
+}
+
+.calculator {
+  --button-width: 80px;
+  --button-height: 80px;
+
+  display: grid;
+  grid-template-areas:
+    "result result result result"
+    "ac plus-minus percent divide"
+    "number-7 number-8 number-9 multiply"
+    "number-4 number-5 number-6 substract"
+    "number-1 number-2 number-3 add"
+    "number-0 number-0 dot equal";
+  grid-template-columns: repeat(4, var(--button-width));
+  grid-template-rows: repeat(6, var(--button-height));
+
+  /* 拟态化关键设定 */
+  /* 将左上角的阴影设定为光亮的颜色，所以设定 x 与 y 是 -8px */
+  /* 然后设定模糊半径是 16px，扩散半径是 -10px */
+  /* 颜色使用 rgba() 设定，白色，透明度是 1 */
+  box-shadow: -8px -8px 16px -10px rgba(255, 255, 255, 1);
+}
