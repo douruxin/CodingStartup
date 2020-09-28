@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rolling Counter</title>
+    <!-- 加载 Font-Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <button @click="subtract" :disabled="isAnimating">
+        <i class="fas fa-minus"></i>
+      </button>
+      <span
+        :class="{before: isBefore, after: isAfter}"
+        :data-before="countBefore"
+        :data-after="countAfter"
+        ref="number"
+        >{{ count }}</span
+      >
+      <button @click="add" :disabled="isAnimating">
+        <i class="fas fa-plus"></i>
+      </button>
+    </div>
+
+    <!-- 引入 Vue 库 -->
+    <script src="https://cdn.staticfile.org/vue/2.6.12/vue.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
