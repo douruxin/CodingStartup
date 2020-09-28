@@ -1,0 +1,48 @@
+html {
+  font-size: 12px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 2rem;
+  font-family: Helvetica;
+}
+
+label {
+  position: relative;
+  display: block;
+}
+
+label::before, label::after  {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  font-size: 3rem;
+  padding: .5rem 1rem;
+  font-family: inherit;
+  box-sizing: border-box;
+  color: #999;
+}
+
+label::before {
+  content: "Macbook Air";
+}
+
+label::after {
+  content: "Macbook Air";
+}
+
+input[type="text"] {
+  border: 3px solid #333;
+  font-size: 3rem;
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  margin: 0;
+  font-family: inherit;
+  outline: none;
+}
