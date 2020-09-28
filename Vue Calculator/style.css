@@ -25,5 +25,46 @@ body {
   /* 将左上角的阴影设定为光亮的颜色，所以设定 x 与 y 是 -8px */
   /* 然后设定模糊半径是 16px，扩散半径是 -10px */
   /* 颜色使用 rgba() 设定，白色，透明度是 1 */
-  box-shadow: -8px -8px 16px -10px rgba(255, 255, 255, 1);
+  box-shadow: -8px -8px 16px -10px rgba(255, 255, 255, 1),
+    8px 8px 16px -10px rgba(0, 0, 0, 0.15);
+  padding: 24px;
+  border-radius: 20px;
+}
+
+.calculator button {
+  margin: 8px;
+  padding: 0;
+  border: 0;
+  display: block;
+  outline: none;
+  border-radius: calc(var(--button-height) / 2);
+  font-size: 24px;
+  font-family: Helvetica;
+  font-weight: normal;
+  color: #999;
+  background: linear-gradient(
+    135deg,
+    rgba(230, 230, 230, 1) 0%,
+    rgba(246, 246, 246, 1) 100%
+  );
+  box-shadow: -4px -4px 10px -8px rgba(255, 255, 255, 1),
+    4px 4px 10px -8px rgba(0, 0, 0, 0.3);
+}
+
+.calculator button:active {
+  box-shadow: -4px -4px 10px -8px rgba(255, 255, 255, 1) inset,
+    4px 4px 10px -8px rgba(0, 0, 0, 0.3) inset;
+}
+
+.result {
+  text-align: right;
+  line-height: var(--button-height);
+  font-size: 48px;
+  font-family: Helvetica;
+  padding: 0 20px;
+  color: #666;
+}
+
+[v-cloak] {
+  display: none;
 }
