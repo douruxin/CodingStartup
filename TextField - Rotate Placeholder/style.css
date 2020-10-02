@@ -11,9 +11,28 @@ body {
   font-family: Helvetica;
 }
 
+input[type="text"] {
+  border: 3px solid #333;
+  font-size: 3rem;
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  margin: 0;
+  font-family: inherit;
+  outline: none;
+}
+
 label {
   position: relative;
   display: block;
+  overflow: hidden;
+}
+
+label::before {
+  content: attr(data-before);
+}
+
+label::after {
+  content: attr(data-after);
 }
 
 label::before, label::after  {
@@ -29,20 +48,38 @@ label::before, label::after  {
   color: #999;
 }
 
-label::before {
-  content: "Macbook Air";
+@keyframes placeholder-before {
+  0% {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
 }
 
-label::after {
-  content: "Macbook Air";
+@keyframes placeholder-after {
+  0% {
+    transform: translateY(0%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
 }
 
-input[type="text"] {
-  border: 3px solid #333;
-  font-size: 3rem;
-  border-radius: .5rem;
-  padding: .5rem 1rem;
-  margin: 0;
-  font-family: inherit;
-  outline: none;
+.animate::before {
+  animation: .25s placeholder-before ease-in-out;
+}
+
+.animate::after {
+  animation: .25s placeholder-after ease-in-out;
+}
+
+.animate::before, .animate::after {
+  animation-fill-mode: forwards;
 }

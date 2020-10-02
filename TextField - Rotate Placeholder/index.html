@@ -8,8 +8,19 @@
   </head>
   <body>
     <div id="app">
-      <label>
-        <input type="text" placeholder="Macbook Pro" />
+      <label
+        :data-before="before"
+        :data-after="after"
+        :class="{ animate: shouldAnimate }"
+        @animationend="animationEnded"
+      >
+        <input
+          type="text"
+          :placeholder="placeholder"
+          @focus="isFocusing = true"
+          @blur="isFocusing = false"
+          @keydown="doSearch"
+        />
       </label>
     </div>
 
