@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sliding Emojis</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <ul class="emojis">
+      <li>👍</li>
+      <li>❤️</li>
+      <li>😊</li>
+      <li>😍</li>
+      <li>✌</li>
+    </ul>
+
+    <svg viewBox="0 0 300 162">
+      <filter id="mix">
+        <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="5" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 60 -36" />
+      </filter>
+
+      <g filter="url(#mix)">
+        <rect width="300" height="50" x="0" y="50" rx="25" fill="#e3e3e3" />
+        <circle cx="40" cy="75" fill="#e3e3e3" id="pop" />
+      </g>
+    </svg>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
