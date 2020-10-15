@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bilibili Homepage Head Animation</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <!-- 
+      实现 Bilibili 首页头部动画（国庆）
+        1. 实现一个多图层组合的静态页面
+        2. 实现不同图层不同清晰度配置
+        3. 实现鼠标左右移动导致的清晰度变化
+        4. 实现鼠标左右移动导致的跟随位移
+        5. 实现小女生的眨眼效果
+        6. 实现鼠标离开时整个效果的还原
+     -->
+
+    <div class="channel">bilibili 编码中梦见未来</div>
+
+    <div class="banner">
+      <div class="image">
+        <img width="3000" height="250" src="./images/bg.png" alt="bg" />
+      </div>
+      <div class="image">
+        <img width="1800" height="165" src="./images/girl1.png" alt="girl" />
+      </div>
+      <div class="image">
+        <img width="3000" height="250" src="./images/grassland.png" alt="grassland" />
+      </div>
+      <div class="image">
+        <img width="1800" height="160" src="./images/mushroom.png" alt="mushroom" />
+      </div>
+      <div class="image">
+        <img width="1800" height="165" src="./images/spirit.png" alt="spirit" />
+      </div>
+      <div class="image">
+        <img width="1950" height="178" src="./images/leaf.png" alt="leaf" />
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

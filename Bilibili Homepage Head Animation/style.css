@@ -1,0 +1,58 @@
+:root {
+  --background-color: #2c3e50;
+  --border-color: #7591AD;
+  --text-color: #34495e;
+  --color1: #EC3E27;
+  --color2: #fd79a8;
+  --color3: #0984e3;
+  --color4: #00b894;
+  --color5: #fdcb6e;
+  --color6: #e056fd;
+  --color7: #F97F51;
+  --color8: #BDC581;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--background-color);
+  font-family: 'Montserrat', sans-serif, Arial, 'Microsoft Yahei';
+}
+
+.channel {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.banner {
+  position: relative;
+  width: 100vw;
+  height: 155px;
+  overflow: hidden;
+  background-color: #00b894;
+}
+
+.image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
