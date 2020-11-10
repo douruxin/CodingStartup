@@ -1,0 +1,84 @@
+:root {
+  --device-width: 770px;
+  --device-height: 1336px;
+  --ui-width: 640px;
+  font-size: 15px;
+}
+
+body {
+  background-color: #000;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Helvetica;
+  padding: 4rem 0;
+}
+
+h2 {
+  color: #6e6e73;
+  text-align: center;
+  font-size: 4.5rem;
+  font-weight: 600;
+  margin: 6rem 0;
+}
+
+h2 p {
+  margin: 0;
+  color: #fff;
+}
+
+#iphone {
+  position: relative;
+  width: var(--device-width);
+  height: var(--device-height);
+}
+
+#hardware {
+  width: 100%;
+  height: 100%;
+  background-image: url(https://assets.codepen.io/2002878/iphone12-5g_on_phone.jpg);
+  background-size: var(--device-width) var(--device-height);
+
+  mask-image: url(https://assets.codepen.io/2002878/iphone12-5g_on_phone_mask.png);
+  -webkit-mask-image: url(https://assets.codepen.io/2002878/iphone12-5g_on_phone_mask.png);
+  mask-size: var(--device-width) var(--device-height);
+  -webkit-mask-size: var(--device-width) var(--device-height);
+}
+
+#ui {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#ui .top-ui {
+  display: block;
+  width: var(--ui-width);
+  height: auto;
+  margin: 70px auto 0;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #222;
+}
+
+#ui ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  --progress: 0;
+}
+
+#ui ul li img {
+  display: block;
+  width: var(--ui-width);
+  height: auto;
+  margin: 10px auto;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #222;
+  transform: scale(calc(1.8 - (0.8 * var(--progress)))) translateY(calc(-60px * (1 - var(--progress))));
+  opacity: var(--progress);
+}
