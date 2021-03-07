@@ -1,0 +1,24 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#image {
+  width: 300px;
+  height: 300px;
+  background-color: #000;
+  overflow: hidden;
+}
+
+#image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#image[zoomed] img {
+  transform-origin: 0% 0%; /* Added */
+  transform: translate(calc(var(--x) * -200%), calc(var(--y) * -200%)) scale(3); /* Updated */
+}
