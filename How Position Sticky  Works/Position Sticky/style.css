@@ -1,0 +1,22 @@
+body {
+  font-family: Helvetica;
+  text-align: center;
+}
+
+.sticky-container {
+  background-color: #ccc;
+  padding: 20px;
+  margin: 20px;
+}
+
+.sticky-header {
+  background-color: #999;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+}
+
+.long-content {
+  height: 300vh;
+  background-color: #fff;
+}

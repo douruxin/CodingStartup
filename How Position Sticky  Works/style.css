@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica;
+}
+
+.homepod-section {
+}
+
+.other-section {
+  background-color: #eee;
+  height: 3000px;
+}
+
+.description {
+  width: 490px;
+  padding: 80px 50px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  text-align: center;
+  color: #fff;
+  margin: 0 auto 100vh;
+}
+
+.description h3 {
+  font-size: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.description p {
+  font-size: 18px;
+  margin: 12px 0 0;
+}
+
+.homepod-container {
+  width: 100%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  z-index: -1;
+}
+
+.homepod {
+  width: 654px;
+  height: 825px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.homepod div {
+  width: inherit;
+  height: inherit;
+  background-size: contain;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.device {
+  background-image: url(https://assets.codepen.io/2002878/homepod.jpg);
+}
+
+.part-1 {
+  background-image: url(https://assets.codepen.io/2002878/homepod_1.jpg);
+  opacity: var(--part-1);
+}
+
+.part-2 {
+  background-image: url(https://assets.codepen.io/2002878/homepod_2.jpg);
+  opacity: var(--part-2);
+}
+
+.part-3 {
+  background-image: url(https://assets.codepen.io/2002878/homepod_3.jpg);
+  opacity: var(--part-3);
+}
+
+.part-4 {
+  background-image: url(https://assets.codepen.io/2002878/homepod_4.jpg);
+  opacity: var(--part-4);
+}
+
+.ending {
+  background-image: url(https://assets.codepen.io/2002878/homepod.jpg);
+  opacity: var(--ending);
+}
+
+.description-container {
+  padding-bottom: 100vh;
+}
+
+.description:last-child {
+  margin-bottom: 0;
+}
