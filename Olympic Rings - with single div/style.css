@@ -1,0 +1,123 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  perspective: 1000px;
+}
+
+.olympic-rings {
+  width: 800px;
+  min-width: 800px;
+  height: 370px;
+  min-height: 370px;
+
+  background-image: radial-gradient(
+      circle,
+      transparent 58%,
+      #0081c8 58%,
+      #0081c8 70%,
+      transparent 70%
+    ),
+    radial-gradient(
+      circle,
+      transparent 58%,
+      #000 58%,
+      #000 70%,
+      transparent 70%
+    ),
+    radial-gradient(
+      circle,
+      transparent 58%,
+      #ee334e 58%,
+      #ee334e 70%,
+      transparent 70%
+    ),
+    radial-gradient(
+      circle,
+      transparent 58%,
+      #fcb131 58%,
+      #fcb131 70%,
+      transparent 70%
+    ),
+    radial-gradient(
+      circle,
+      transparent 58%,
+      #00a651 58%,
+      #00a651 70%,
+      transparent 70%
+    );
+  background-position: 0% 0%, 50% 0%, 100% 0%, 25% 100%, 75% 100%;
+  background-repeat: no-repeat;
+  background-size: 250px 250px;
+  position: relative;
+
+  animation: rotate 5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  0%, 100% {
+    transform: rotateY(30deg);
+  }
+  50% {
+    transform: rotateY(-30deg);
+  }
+}
+
+.olympic-rings::before,
+.olympic-rings::after {
+  content: "";
+  display: block;
+  width: inherit;
+  height: inherit;
+
+  background-image: radial-gradient(
+      circle,
+      transparent 58%,
+      #fcb131 58%,
+      #fcb131 70%,
+      transparent 70%
+    ),
+    radial-gradient(
+      circle,
+      transparent 58%,
+      #00a651 58%,
+      #00a651 70%,
+      transparent 70%
+    ),
+    radial-gradient(
+      circle,
+      transparent 58%,
+      #0081c8 58%,
+      #0081c8 70%,
+      transparent 70%
+    ),
+    radial-gradient(
+      circle,
+      transparent 58%,
+      #000 58%,
+      #000 70%,
+      transparent 70%
+    ),
+    radial-gradient(
+      circle,
+      transparent 58%,
+      #ee334e 58%,
+      #ee334e 70%,
+      transparent 70%
+    );
+  background-position: 25% 100%, 75% 100%, 0% 0%, 50% 0%, 100% 0%;
+  background-repeat: inherit;
+  background-size: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.olympic-rings::before {
+  clip-path: polygon(33% 28%, 39% 28%, 39% 67%, 16% 67%, 16% 57%, 33% 57%);
+}
+
+.olympic-rings::after {
+  clip-path: polygon(68% 28%, 72% 28%, 72% 67%, 50% 67%, 50% 57%, 68% 57%);
+}
